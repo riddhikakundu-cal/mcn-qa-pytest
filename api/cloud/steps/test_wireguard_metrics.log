@@ -1,0 +1,70 @@
+2025-07-30 15:43:13,495 | INFO     | wireguard-tests | Logging initialized successfully
+2025-07-30 15:43:13,498 | DEBUG    | parse | format '{state} source, peer, and time range parameters' -> '(?P<state>.+?) source, peer, and time range parameters'
+2025-07-30 15:43:13,504 | INFO     | wireguard-tests | Loaded environment file /home/vboxuser/Documents/mcn-qa-pytest/env/qa.env
+2025-07-30 15:43:13,507 | DEBUG    | wireguard-tests | Querying endpoint: http://3.111.234.240:8080/metrics
+2025-07-30 15:43:13,507 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:13,508 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:13,508 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:13,872 | INFO     | wireguard-tests |   200 
+2025-07-30 15:43:13,874 | DEBUG    | wireguard-tests | Response preview: [[{"query":"wireguard_connection_status","sourceVrouterID":1589,"sourceVrouterPublicIP":"172.191.6.12","sourceVrouterNIC0IP":"10.2.1.4","sourceVrouterNIC1IP":"","peerVrouterID":1588,"peerVrouterPublic
+2025-07-30 15:43:13,876 | INFO     | wireguard-tests | Successfully received 2 metric records in nested structure
+2025-07-30 15:43:13,880 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:13,882 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:13,883 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': 'invalid_id', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:14,250 | INFO     | wireguard-tests |   200 
+2025-07-30 15:43:14,262 | DEBUG    | wireguard-tests | Response preview: [[{"query":"wireguard_connection_status","sourceVrouterID":1589,"sourceVrouterPublicIP":"172.191.6.12","sourceVrouterNIC0IP":"10.2.1.4","sourceVrouterNIC1IP":"","peerVrouterID":1588,"peerVrouterPublic
+2025-07-30 15:43:14,264 | INFO     | wireguard-tests | Received nested list with 2 items for invalid params
+2025-07-30 15:43:14,272 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:14,281 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:14,283 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:14,642 | INFO     | wireguard-tests |   200 
+2025-07-30 15:43:14,643 | DEBUG    | wireguard-tests | Response preview: [[{"query":"wireguard_connection_status","sourceVrouterID":1589,"sourceVrouterPublicIP":"172.191.6.12","sourceVrouterNIC0IP":"10.2.1.4","sourceVrouterNIC1IP":"","peerVrouterID":1588,"peerVrouterPublic
+2025-07-30 15:43:14,646 | INFO     | wireguard-tests | Received data for 2 vrouters in nested structure
+2025-07-30 15:43:14,651 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:14,653 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:14,656 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': 'invalid_peer', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:15,021 | INFO     | wireguard-tests |   200 
+2025-07-30 15:43:15,023 | DEBUG    | wireguard-tests | Response preview: [[{"query":"wireguard_connection_status","sourceVrouterID":1589,"sourceVrouterPublicIP":"172.191.6.12","sourceVrouterNIC0IP":"10.2.1.4","sourceVrouterNIC1IP":"","peerVrouterID":1588,"peerVrouterPublic
+2025-07-30 15:43:15,026 | INFO     | wireguard-tests | Received nested list with 2 items for invalid params
+2025-07-30 15:43:15,030 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,032 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,033 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:15,397 | INFO     | wireguard-tests |   200 
+2025-07-30 15:43:15,398 | DEBUG    | wireguard-tests | Response preview: [[{"query":"wireguard_connection_status","sourceVrouterID":1589,"sourceVrouterPublicIP":"172.191.6.12","sourceVrouterNIC0IP":"10.2.1.4","sourceVrouterNIC1IP":"","peerVrouterID":1588,"peerVrouterPublic
+2025-07-30 15:43:15,404 | INFO     | wireguard-tests | Received data for 2 peers in nested structure
+2025-07-30 15:43:15,411 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,414 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,430 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': 'not-a-timestamp', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:15,542 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:15,545 | DEBUG    | wireguard-tests | Response preview: {"timestamp":"2025-07-30T10:14:00.996184137","message":"Invalid time format for timeFrom. Should be given as yyyy-MM-dd'T'HH:mm:ss'Z'","details":"uri=/metrics"}
+2025-07-30 15:43:15,548 | INFO     | wireguard-tests | Received expected error status: 400
+2025-07-30 15:43:15,553 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,556 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,560 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeTo': '2025-07-30T06:44:53Z'}
+2025-07-30 15:43:15,660 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:15,665 | DEBUG    | wireguard-tests | Response preview: {"type":"about:blank","title":"Bad Request","status":400,"detail":"Required parameter 'timeFrom' is not present.","instance":"/metrics"}
+2025-07-30 15:43:15,668 | INFO     | wireguard-tests | Received expected error status: 400
+2025-07-30 15:43:15,673 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,676 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,679 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': 'bad_time'}
+2025-07-30 15:43:15,777 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:15,781 | DEBUG    | wireguard-tests | Response preview: {"timestamp":"2025-07-30T10:14:01.238723687","message":"Invalid time format for timeTo. Should be given as yyyy-MM-dd'T'HH:mm:ss'Z'","details":"uri=/metrics"}
+2025-07-30 15:43:15,783 | INFO     | wireguard-tests | Received expected error status: 400
+2025-07-30 15:43:15,787 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,791 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,795 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z'}
+2025-07-30 15:43:15,908 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:15,911 | DEBUG    | wireguard-tests | Response preview: {"type":"about:blank","title":"Bad Request","status":400,"detail":"Required parameter 'timeTo' is not present.","instance":"/metrics"}
+2025-07-30 15:43:15,913 | INFO     | wireguard-tests | Received expected error status: 400
+2025-07-30 15:43:15,917 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:15,919 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:15,921 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z', 'timeTo': '07-25-2025T11:00:00'}
+2025-07-30 15:43:16,022 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:16,024 | DEBUG    | wireguard-tests | Response preview: {"timestamp":"2025-07-30T10:14:01.482894451","message":"Invalid time format for timeTo. Should be given as yyyy-MM-dd'T'HH:mm:ss'Z'","details":"uri=/metrics"}
+2025-07-30 15:43:16,026 | INFO     | wireguard-tests | Received expected error status: 400
+2025-07-30 15:43:16,030 | DEBUG    | wireguard-tests | API base URL = http://3.111.234.240:8080/metrics
+2025-07-30 15:43:16,032 | INFO     | wireguard-tests | Using time range: 2025-07-30T05:44:53Z to 2025-07-30T06:44:53Z
+2025-07-30 15:43:16,034 | INFO     | wireguard-tests |   GET  http://3.111.234.240:8080/metrics  params={'query': 'wireguard_connection_status', 'sourceVrouterID': '1', 'peerVrouterID': '2', 'timeFrom': '2025-07-30T05:44:53Z'}
+2025-07-30 15:43:16,129 | INFO     | wireguard-tests |   400 
+2025-07-30 15:43:16,131 | DEBUG    | wireguard-tests | Response preview: {"type":"about:blank","title":"Bad Request","status":400,"detail":"Required parameter 'timeTo' is not present.","instance":"/metrics"}
+2025-07-30 15:43:16,132 | INFO     | wireguard-tests | Received expected error status: 400

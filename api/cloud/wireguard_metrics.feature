@@ -1,0 +1,62 @@
+Feature: WireGuard Metrics API
+  As a system administrator
+  I want to query WireGuard connection metrics
+  So that I can monitor VPN connection status and performance
+
+Background:
+    Given the WireGuard metrics API is available
+
+  Scenario: Query metrics with valid parameters
+    Given valid source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the metrics should be returned in the response
+
+  Scenario: Query with invalid source vrouter ID
+    Given invalid source source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with missing source vrouter ID
+    Given no source source, peer, and time range parameters
+    When I query wireguard connection status
+    Then metrics for all vrouters should be returned
+
+  Scenario: Query with invalid peer vrouter ID
+    Given invalid peer source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with missing peer vrouter ID
+    Given no peer source, peer, and time range parameters
+    When I query wireguard connection status
+    Then metrics for all peers should be returned
+
+  Scenario: Query with invalid timeFrom parameter
+    Given invalid timeFrom source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with missing timeFrom parameter
+    Given no timeFrom source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with invalid timeTo parameter
+    Given invalid timeTo source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with missing timeTo parameter
+    Given no timeTo source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with incorrect timeTo format
+    Given incorrect timeTo format source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data
+
+  Scenario: Query with timeTo entirely omitted
+    Given timeTo is entirely omitted source, peer, and time range parameters
+    When I query wireguard connection status
+    Then the response should indicate failure or empty data

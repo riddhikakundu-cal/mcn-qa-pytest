@@ -1,0 +1,54 @@
+2025-07-30 16:15:09,901 | DEBUG    | parse | format 'the query parameters are missing "{param}"' -> 'the query parameters are missing "(?P<param>.+?)"'
+2025-07-30 16:15:09,902 | DEBUG    | parse | format 'the query parameters are invalid "{param}"' -> 'the query parameters are invalid "(?P<param>.+?)"'
+2025-07-30 16:15:09,902 | DEBUG    | parse | format 'the query parameters have special characters in "{param}"' -> 'the query parameters have special characters in "(?P<param>.+?)"'
+2025-07-30 16:15:09,902 | DEBUG    | parse | format 'the request headers are missing "{header}"' -> 'the request headers are missing "(?P<header>.+?)"'
+2025-07-30 16:15:09,903 | DEBUG    | parse | format 'the response code should be {expected_code:d}' -> 'the response code should be (?P<expected_code>[-+ ]?\\d+|[-+ ]?0[xX][0-9a-fA-F]+|[-+ ]?0[bB][01]+|[-+ ]?0[oO][0-7]+)'
+2025-07-30 16:15:09,903 | DEBUG    | parse | format 'the ping metrics API response code should be {expected_code:d}' -> 'the ping metrics API response code should be (?P<expected_code>[-+ ]?\\d+|[-+ ]?0[xX][0-9a-fA-F]+|[-+ ]?0[bB][01]+|[-+ ]?0[oO][0-7]+)'
+2025-07-30 16:15:09,903 | DEBUG    | parse | format 'the response body should contain "{text}"' -> 'the response body should contain "(?P<text>.+?)"'
+2025-07-30 16:15:09,910 | INFO     | ping-tests | Setting valid query parameters
+2025-07-30 16:15:09,913 | INFO     | ping-tests | Setting valid request headers
+2025-07-30 16:15:09,916 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:14,647 | INFO     | ping-tests | Received response with status code: 200
+2025-07-30 16:15:14,654 | INFO     | ping-tests | Asserting status code: expected=200, actual=200
+2025-07-30 16:15:14,656 | INFO     | ping-tests | Asserting response contains text: 'output'
+2025-07-30 16:15:14,660 | INFO     | ping-tests | Removing query parameter: source
+2025-07-30 16:15:14,661 | INFO     | ping-tests | Setting valid request headers
+2025-07-30 16:15:14,663 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:14,769 | INFO     | ping-tests | Received response with status code: 400
+2025-07-30 16:15:14,772 | INFO     | ping-tests | Asserting status code: expected=400, actual=400
+2025-07-30 16:15:14,776 | INFO     | ping-tests | Setting valid query parameters
+2025-07-30 16:15:14,778 | INFO     | ping-tests | Removing request header: X-TenantID
+2025-07-30 16:15:14,779 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:14,875 | INFO     | ping-tests | Received response with status code: 400
+2025-07-30 16:15:14,893 | INFO     | ping-tests | Asserting status code: expected=400, actual=400
+2025-07-30 16:15:14,898 | INFO     | ping-tests | Making query parameter 'destination' invalid
+2025-07-30 16:15:14,900 | INFO     | ping-tests | Setting valid request headers
+2025-07-30 16:15:14,905 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:15,014 | INFO     | ping-tests | Received response with status code: 400
+2025-07-30 16:15:15,015 | INFO     | ping-tests | Asserting status code: expected=400, actual=400
+2025-07-30 16:15:15,018 | INFO     | ping-tests | Inserting special characters in param: type
+2025-07-30 16:15:15,020 | INFO     | ping-tests | Setting valid request headers
+2025-07-30 16:15:15,022 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:15,169 | INFO     | ping-tests | Received response with status code: 400
+2025-07-30 16:15:15,172 | INFO     | ping-tests | Asserting status code: expected=400, actual=400
+2025-07-30 16:15:15,189 | INFO     | ping-tests | Setting valid query parameters
+2025-07-30 16:15:15,190 | INFO     | ping-tests | Setting invalid X-TenantID header
+2025-07-30 16:15:15,191 | INFO     | ping-tests | Sending API request with params and headers
+2025-07-30 16:15:15,289 | INFO     | ping-tests | Received response with status code: 400
+2025-07-30 16:15:15,292 | INFO     | ping-tests | Asserting status code: expected=400, actual=400
+2025-07-30 16:15:15,297 | INFO     | ping-tests | Triggering ping metrics request using dynamic source/destination IPs
+2025-07-30 16:15:19,862 | INFO     | ping-tests | Received response with status code: 200
+2025-07-30 16:15:19,863 | INFO     | ping-tests | Asserting status code: expected=200, actual=200
+2025-07-30 16:15:19,863 | INFO     | ping-tests | Checking if response contains 'result', 'latency', or 'output'
+2025-07-30 16:15:19,864 | INFO     | ping-tests | Raw output text: PING 3.111.234.240 (3.111.234.240) 56(84) bytes of data.
+64 bytes from 3.111.234.240: icmp_seq=1 ttl=44 time=211 ms
+64 bytes from 3.111.234.240: icmp_seq=2 ttl=44 time=210 ms
+64 bytes from 3.111.234.240: icmp_seq=3 ttl=44 time=210 ms
+64 bytes from 3.111.234.240: icmp_seq=4 ttl=44 time=211 ms
+64 bytes from 3.111.234.240: icmp_seq=5 ttl=44 time=210 ms
+
+--- 3.111.234.240 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4002ms
+rtt min/avg/max/mdev = 210.388/210.520/210.726/0.123 ms
+
+2025-07-30 16:15:19,866 | INFO     | ping-tests | Expected destination: 3.111.234.240, Actual from output: 3.111.234.240

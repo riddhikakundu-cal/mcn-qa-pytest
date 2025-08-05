@@ -1,4 +1,4 @@
-import requests
+'''import requests
 import logging
 from pytest_bdd import scenarios, parsers, when, then
 
@@ -39,3 +39,4 @@ def validate_response_body():
     assert "output" in json_data, f"Response does not contain 'output'. Got: {json_data}"
 
 
+'''

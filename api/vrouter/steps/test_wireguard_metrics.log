@@ -1,0 +1,9 @@
+2025-08-05 10:19:10,295 | INFO     | wireguard-tests | Logging initialized successfully
+2025-08-05 10:19:10,300 | DEBUG    | parse | format '{state} source, peer, and time range' -> '(?P<state>.+?) source, peer, and time range'
+2025-08-05 10:19:10,300 | DEBUG    | parse | format 'I query wireguard connection status with "{metric}"' -> 'I query wireguard connection status with "(?P<metric>.+?)"'
+2025-08-05 10:19:10,301 | DEBUG    | parse | format 'the response must contain the sourceVrouterID provided' -> 'the response must contain the sourceVrouterID provided'
+2025-08-05 10:19:10,301 | DEBUG    | parse | format 'the response must contain the peerVrouterID provided' -> 'the response must contain the peerVrouterID provided'
+2025-08-05 10:19:10,302 | DEBUG    | parse | format 'the response contains non-empty values for {metric_type}' -> 'the response contains non-empty values for (?P<metric_type>.+?)'
+2025-08-05 10:19:10,317 | INFO     | ping-tests | Setting valid query parameters
+2025-08-05 10:19:10,323 | INFO     | ping-tests | Setting valid request headers
+2025-08-05 10:19:10,330 | INFO     | ping-tests | Sending API request with params and headers

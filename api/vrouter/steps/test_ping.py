@@ -9,6 +9,10 @@ from dotenv import load_dotenv
 from pytest_bdd import scenarios, given, when, then, parsers
 
 
+pytestmark = pytest.mark.ping
+
+
+
 LOG_FILE: Final = Path(__file__).parent / "test_ping.log"
 
 

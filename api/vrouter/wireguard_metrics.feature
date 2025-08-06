@@ -12,13 +12,11 @@ Background:
     Then the metrics should be returned in the response
 
 
-
   Scenario: Query metrics with specific sourceVrouterID
     Given valid source, peer, and time range parameters
     When I query wireguard connection status
-    Then the metrics should be returned 
+    Then the metrics should be returned in the response
     And the response must contain the sourceVrouterID provided
-
 
 
   Scenario: Query metrics with specific peerVrouterID
